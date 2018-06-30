@@ -5,7 +5,9 @@
 <img align="left" src="https://raw.githubusercontent.com/Lichtel/ObjectFiller.NET-RegExPlugin/master/logo.png" alt="Logo" />
 The plugin for
 [ObjectFiller.NET](https://github.com/Tynamix/ObjectFiller.NET)
-allows you to generate string values based on regular expressions. The resulting string values will match the given regex. The reverse regex functionality is provided by the [Fare](https://github.com/moodmosaic/Fare) project.
+allows you to generate string values based on regular expressions. The resulting string values will match the given regex. The reverse regex functionality is provided by the
+[Fare](https://github.com/moodmosaic/Fare)
+project.
 
 ## NuGet
 
