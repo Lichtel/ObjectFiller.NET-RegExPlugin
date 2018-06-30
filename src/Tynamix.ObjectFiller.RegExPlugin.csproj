@@ -9,4 +9,7 @@
   <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Tynamix.ObjectFiller.RegExPlugin.xml</DocumentationFile>
+  </PropertyGroup>
 </Project>
