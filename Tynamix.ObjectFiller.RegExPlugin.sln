@@ -5,7 +5,12 @@ VisualStudioVersion = 15.0.27428.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tynamix.ObjectFiller.RegExPlugin", "src\Tynamix.ObjectFiller.RegExPlugin.csproj", "{0B56F083-934A-4592-9632-49842CA63E1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tynamix.ObjectFiller.RegExPlugin.Tests", "test\Tynamix.ObjectFiller.RegExPlugin.Tests.csproj", "{3CEE3112-4AEA-47ED-801D-95076EA728FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tynamix.ObjectFiller.RegExPlugin.Tests", "test\Tynamix.ObjectFiller.RegExPlugin.Tests.csproj", "{3CEE3112-4AEA-47ED-801D-95076EA728FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B3E135F4-9C27-4E06-BE3D-C2072D5C9C21}"
+	ProjectSection(SolutionItems) = preProject
+		build.cake = build.cake
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
