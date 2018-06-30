@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net46</TargetFramework>
+    <TargetFrameworks>net35;netstandard1.1</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Fare" Version="2.1.1" />
@@ -9,4 +9,7 @@
   <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Tynamix.ObjectFiller.RegExPlugin.xml</DocumentationFile>
+  </PropertyGroup>
 </Project>
