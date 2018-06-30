@@ -85,33 +85,34 @@ Task("Pack")
 		CleanDirectory("nuget");
 		
 		var nuGetPackSettings   = new NuGetPackSettings {
-                                Id                      = appName,
-                                Version                 = gitVersion.NuGetVersionV2,
-                                Title                   = appName,
-                                Authors                 = new[] {"Erik Lichtenstein"},
-                                Owners                  = new[] {"Erik Lichtenstein"},
-                                Description             = "The extension for ObjectFiller .NET allows to generate string values that match a given regular expression.",
-                                IconUrl					= new Uri("https://github.com/Lichtel/ObjectFiller.NET-RegExPlugin/blob/master/logo.png"),
-                                ProjectUrl              = new Uri("http://objectfiller.net/"),
-								LicenseUrl              = new Uri("https://github.com/Lichtel/ObjectFiller.NET-RegExPlugin/blob/master/LICENCE"),
-                                Tags                    = new [] {"ObjectFiller", "Tynamix", "Test", "Data", "Regex", "Regular", "Expression"},
-                                RequireLicenseAcceptance= false,
-                                Symbols                 = false,
-                                Files                   = new [] {
-																	 new NuSpecContent {Source = "net35/Tynamix.ObjectFiller.RegExPlugin.dll", Target = "lib/net35" },
-                                                                     new NuSpecContent {Source = "net35/Tynamix.ObjectFiller.RegExPlugin.xml", Target = "lib/net35" },
-																	 new NuSpecContent {Source = "netstandard1.1/Tynamix.ObjectFiller.RegExPlugin.dll", Target = "lib/netstandard1.1" },
-                                                                     new NuSpecContent {Source = "netstandard1.1/Tynamix.ObjectFiller.RegExPlugin.xml", Target = "lib/netstandard1.1" }
+                                Id                       = appName,
+                                Version                  = gitVersion.NuGetVersionV2,
+                                Title                    = appName,
+                                Authors                  = new[] { "Erik Lichtenstein" },
+                                Owners                   = new[] { "Erik Lichtenstein" },
+                                Description              = "The extension for ObjectFiller .NET allows to generate string values that match a given regular expression.",
+                                IconUrl					 = new Uri("https://github.com/Lichtel/ObjectFiller.NET-RegExPlugin/blob/master/logo.png"),
+                                ProjectUrl               = new Uri("http://objectfiller.net/"),
+								LicenseUrl               = new Uri("https://github.com/Lichtel/ObjectFiller.NET-RegExPlugin/blob/master/LICENCE"),
+                                Tags                     = new [] { "ObjectFiller", "Tynamix", "Test", "Data", "Regex", "Regular", "Expression" },
+								ReleaseNotes             = new [] { "Initial release" },
+                                RequireLicenseAcceptance = false,
+                                Symbols                  = false,
+                                Files                    = new [] {
+																	 new NuSpecContent { Source = "net35/Tynamix.ObjectFiller.RegExPlugin.dll", Target = "lib/net35" },
+                                                                     new NuSpecContent { Source = "net35/Tynamix.ObjectFiller.RegExPlugin.xml", Target = "lib/net35" },
+																	 new NuSpecContent { Source = "netstandard1.1/Tynamix.ObjectFiller.RegExPlugin.dll", Target = "lib/netstandard1.1" },
+                                                                     new NuSpecContent { Source = "netstandard1.1/Tynamix.ObjectFiller.RegExPlugin.xml", Target = "lib/netstandard1.1" }
                                                                   },
-								Dependencies			= new [] {
+								Dependencies			 = new [] {
 																	 new NuSpecDependency { Id = "Tynamix.ObjectFiller", TargetFramework = "net35", Version = "1.5.4.1" },
 																	 new NuSpecDependency { Id = "Fare", TargetFramework = "net35", Version = "2.1.1" },
 																	 new NuSpecDependency { Id = "NETStandard.Library", TargetFramework = "netstandard1.1", Version = "1.6.1" },
 																	 new NuSpecDependency { Id = "Tynamix.ObjectFiller", TargetFramework = "netstandard1.1", Version = "1.5.4.1" },
 																	 new NuSpecDependency { Id = "Fare", TargetFramework = "netstandard1.1", Version = "2.1.1" }
 																  },
-                                BasePath                = "./src/bin/release",
-                                OutputDirectory         = "./nuget"
+                                BasePath                 = "./src/bin/release",
+                                OutputDirectory          = "./nuget"
                             };
             
 		NuGetPack(nuGetPackSettings);
@@ -129,7 +130,7 @@ Task("Publish")
     	if(string.IsNullOrEmpty(apiKey))    
         	throw new InvalidOperationException("Could not resolve Nuget API key.");
 		
-		var package = "./nuget/Tynamix.ObjectFiller.RegExPlugin." + gitVersion.NuGetVersionV2 + ".nupkg";
+		var package = "./nuget/" + appName + "." + gitVersion.NuGetVersionV2 + ".nupkg";
             
 		// Push the package.
 		NuGetPush(package, new NuGetPushSettings {
