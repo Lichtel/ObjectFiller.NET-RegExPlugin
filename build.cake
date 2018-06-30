@@ -130,7 +130,7 @@ Task("Publish")
     	if(string.IsNullOrEmpty(apiKey))    
         	throw new InvalidOperationException("Could not resolve Nuget API key.");
 		
-		var package = "./nuget/Tynamix.ObjectFiller.RegExPlugin." + gitVersion.NuGetVersionV2 + ".nupkg";
+		var package = "./nuget/" + appName + "." + gitVersion.NuGetVersionV2 + ".nupkg";
             
 		// Push the package.
 		NuGetPush(package, new NuGetPushSettings {
