@@ -81,7 +81,7 @@ Task("Pack")
                                 IconUrl					= new Uri("https://github.com/Lichtel/ObjectFiller.NET-RegExPlugin/blob/master/logo.png"),
                                 ProjectUrl              = new Uri("http://objectfiller.net/"),
 								LicenseUrl              = new Uri("https://github.com/Lichtel/ObjectFiller.NET-RegExPlugin/blob/master/LICENCE"),
-                                Tags                    = new [] {"ObjectFiller", "Tynamix", "Test", "Data", "Regex", "Regular" "Expression"},
+                                Tags                    = new [] {"ObjectFiller", "Tynamix", "Test", "Data", "Regex", "Regular", "Expression"},
                                 RequireLicenseAcceptance= false,
                                 Symbols                 = false,
                                 Files                   = new [] {
