@@ -4,4 +4,4 @@ init:
 image: Visual Studio 2017
 
 build_script:
-  - cmd: powershell -NoProfile -ExecutionPolicy unrestricted -Command .\build.ps1 -Target "Pack"
+  - cmd: powershell -NoProfile -ExecutionPolicy unrestricted -Command .\build.ps1 -Target "AppVeyor"
